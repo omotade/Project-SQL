@@ -41,6 +41,10 @@ CASE
 END AS Ratios
 FROM sales_report
 
+OR 
+SELECT COALESCE (Ratio, 0) FROM sales_report
+
+
 SELECT "totalTransactionRevenue", country, city, CAST
 ("totalTransactionRevenue" AS NUMERIC)/1000000 as totaltransactrev 
 from all_sessions where all_sessions."totalTransactionRevenue" is
