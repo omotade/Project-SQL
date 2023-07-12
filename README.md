@@ -25,6 +25,8 @@ The country with the top selling product is United States The city with the top 
 
 The United States generated more revenue than any other country.
 
+What is the product with the least sentimental score is "7 Dog Frisbee" and max sentiment score is "USB wired soundbar - in store only"
+
 ## Challenges 
 Assigning the data types to fit the data coming from the csv file
 Not employing all process to cleaning data
