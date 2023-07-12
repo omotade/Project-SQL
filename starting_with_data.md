@@ -1,4 +1,4 @@
-Question 1: 
+Question 1: Asides from using a CASE WHEN Statement to remove NULL VALUES, what other Function in a query removes NULL values
 
 SQL Queries:
 
