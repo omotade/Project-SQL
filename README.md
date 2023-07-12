@@ -26,7 +26,6 @@ The country with the top selling product is United States The city with the top 
 The United States generated more revenue than any other country.
 
 ## Challenges 
-Minor challenges; 
 Assigning the data types to fit the data coming from the csv file
 Not employing all process to cleaning data
 
@@ -35,3 +34,4 @@ Not employing all process to cleaning data
 Properly clean the dataset
 Consult resources on time and quickly
 Read up more functions and their uses.
+Generate the full ERD of the database
