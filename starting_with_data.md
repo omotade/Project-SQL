@@ -5,10 +5,13 @@ SQL Queries:
 Answer: 
 SELECT COALESCE (Ratio, 0) FROM sales_report
 
-What is THE apex productwith the highest sentimental score
+What is the product with the least sentimental score
 
 SELECT products."name" FROM products
-WHERE products."sentimentScore" = (SELECT MAX(products."sentimentScore") FROM products);
+WHERE products."sentimentScore" = (SELECT MIN(products."sentimentScore") AS least_sentiment_score
+FROM products);
+
+Answer: "7 Dog Frisbee"
 
 Question 2: How can you produce duplicates in the analytics table. Retreive columns, fullvisitorid, visitid, and date
 
