@@ -28,6 +28,7 @@ The United States generated more revenue than any other country.
 ## Challenges 
 Assigning the data types to fit the data coming from the csv file
 Not employing all process to cleaning data
+Developing a high level QA process
 
 
 ## Future Goals
@@ -35,3 +36,4 @@ Properly clean the dataset
 Consult resources on time and quickly
 Read up more functions and their uses.
 Generate the full ERD of the database
+Develop more QA process
