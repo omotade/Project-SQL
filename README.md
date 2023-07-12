@@ -15,6 +15,9 @@ Clean the data by removing duplicates
 Analyzed data using the given dataset
 
 ## Results
+
+I found majority of the datasets were duplicates
+
 I discovered that the United states has the highest level with (13,154). Followed by Israel(602) and Australia(358) The City that has the highest level of transaction is San Francisco(1,564) in the United States, followed by Sunnyvale(992) and Atlanta(854)
 
 I found the average count of City is 1,177 in Mountain View, 647 in New York, 464 in San Francisco, 366 in SunnyVale The average product count is 8,727 in United States, 719 in India, 668 in United Kingdom, 642 in Canada, 336 in Germany
