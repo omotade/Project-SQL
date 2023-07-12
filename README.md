@@ -1,17 +1,29 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
 ## Project/Goals
-(fill in your description and goals here)
-
+To create database, tables and import files into the database
+To transform and analyze tables in the database using SQL
+To generate ERD of the tables in the database
 ## Process
-### (your step 1)
-### (your step 2)
+Create a database using PgAdmin 4
+Create tables and their corresponding data types.
+Assigning unique keys and foreign keys
+Import the .csv files and ensuring the delimitter is , and column head is activated
+Cleaned the data by ensuring Null values are taken care off by equating to 0
+Clean the data by dividing the unit price by 1000000
+Clean the data by removing duplicates
+Analyzed data using the given dataset
 
 ## Results
-(fill in what you discovered this data could tell you and how you used the data to answer those questions)
+I discovered that 
 
 ## Challenges 
-(discuss challenges you faced in the project)
+Minor challenges; 
+Assigning the data types to fit the data coming from the csv file
+Not employing all process to cleaning data
+
 
 ## Future Goals
-(what would you do if you had more time?)
+Properly clean the dataset
+Consult resources on time and quickly
+Read up more functions and their uses.
