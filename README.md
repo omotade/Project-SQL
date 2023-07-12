@@ -15,7 +15,15 @@ Clean the data by removing duplicates
 Analyzed data using the given dataset
 
 ## Results
-I discovered that 
+I discovered that the United states has the highest level with (13,154). Followed by Israel(602) and Australia(358) The City that has the highest level of transaction is San Francisco(1,564) in the United States, followed by Sunnyvale(992) and Atlanta(854)
+
+I found the average count of City is 1,177 in Mountain View, 647 in New York, 464 in San Francisco, 366 in SunnyVale The average product count is 8,727 in United States, 719 in India, 668 in United Kingdom, 642 in Canada, 336 in Germany
+
+I notate that the Product category Home/Office/ was the maximum unique categroy ordered across the countries I also notate same product category for city
+
+The country with the top selling product is United States The city with the top selling product is Mountain View
+
+The United States generated more revenue than any other country.
 
 ## Challenges 
 Minor challenges; 
