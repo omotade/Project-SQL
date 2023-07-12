@@ -16,7 +16,7 @@ Analyzed data using the given dataset
 
 ## Results
 
-I found majority of the datasets were duplicates
+I found majority of the datasets were duplicates and had null values
 
 I discovered that the United states has the highest level with (13,154). Followed by Israel(602) and Australia(358) The City that has the highest level of transaction is San Francisco(1,564) in the United States, followed by Sunnyvale(992) and Atlanta(854)
 
