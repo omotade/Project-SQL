@@ -14,7 +14,7 @@ is NOT NULL
 	
 	SELECT * from revenue_transact --- to give the countyr, city and cleaned total transaction revenue 
  
---Then I used the temporary table created to find what country and city has the highest level of transaction	
+--Then I used the view created to find what country and city has the highest level of transaction	
 SELECT 
 SUM(clean_transact) AS revenue, country 
 FROM revenue_transact
@@ -69,11 +69,27 @@ Answer: The average count of City is 1,177 in Mountain View, 647 in New York, 46
 
 
 SQL Queries:
+SELECT DISTINCT alls."visitId", alls.country, sr."total_Ordered", alls."v2ProductCategory"
+FROM all_sessions alls
+JOIN sales_report sr ON sr."productSKU" = alls."productSKU"
+WHERE sr."total_Ordered" > 0
+  AND sr."total_Ordered" = (SELECT MAX("total_Ordered") FROM sales_report)
+GROUP BY alls."visitId", alls.country, sr."total_Ordered", alls."v2ProductCategory";
+
+SELECT DISTINCT alls."visitId", alls.country, alls.city, sr."total_Ordered", alls."v2ProductCategory"
+FROM all_sessions alls
+JOIN sales_report sr ON sr."productSKU" = alls."productSKU"
+WHERE sr."total_Ordered" > 0
+  AND sr."total_Ordered" = (SELECT MIN("total_Ordered") FROM sales_report)
+  AND
+city <> 'not available in demo dataset'
+AND city <> '(not set)'
+GROUP BY alls."visitId", alls.country, alls.city, sr."total_Ordered", alls."v2ProductCategory";
 
 
 
-Answer:
-
+Answer: I notate that the Product category Home/Office/ was the maximum unique categroy ordered across the countries
+	I also notate same product category for city
 
 
 
@@ -82,10 +98,30 @@ Answer:
 
 
 SQL Queries:
+SELECT alls."v2ProductName", country, 
+SUM(p."orderedQuantity") AS Total_ordered_quantity
+FROM all_sessions alls
+JOIN products P 
+ON P."productSKU" = alls."productSKU"
+WHERE city <> 'not available in demo dataset'
+AND city <> '(not set)'
+GROUP BY alls."v2ProductName", country
+ORDER BY Total_ordered_quantity DESC
 
 
+SELECT alls."v2ProductName", city, 
+SUM(p."orderedQuantity") AS Total_ordered_quantity
+FROM all_sessions alls
+JOIN products P 
+ON P."productSKU" = alls."productSKU"
+WHERE city <> 'not available in demo dataset'
+AND city <> '(not set)'
+GROUP BY alls."v2ProductName", city
+ORDER BY Total_ordered_quantity DESC
 
-Answer:
+
+Answer: The country with the top selling product is United States
+	The city with the top selling product is Mountain View
 
 
 
@@ -94,10 +130,17 @@ Answer:
 **Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
 SQL Queries:
+Select CAST(a.revenue AS NUMERIC)/1000000 AS clean_revenue, (alls.country)
+From all_sessions alls
+JOIN analytics a on alls."fullVisitorId" = a."fullVisitorId"
+WHERE alls. country IN (Select country from all_sessions) AND REVENUE is NOT NULL AND
+city <> 'not available in demo dataset'
+AND city <> '(not set)'
+GROUP BY clean_revenue, alls.country
 
 
 
-Answer:
+Answer: The United States generated more revenue than any other country. 
 
 
 
